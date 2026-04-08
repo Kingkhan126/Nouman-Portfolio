@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-violet-950: #2e1065;
+  --color-violet-900: #4c1d95;
+  --color-violet-800: #5b21b6;
+  --color-violet-600: #7c3aed;
+  --color-fuchsia-600: #c026d3;
+  --color-fuchsia-500: #d946ef;
+  --color-indigo-900: #312e81;
+  --color-slate-950: #020617;
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+}
+
+body {
+  @apply bg-slate-950 text-slate-200 antialiased selection:bg-fuchsia-500/30;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Glassmorphism utilities */
+.glass {
+  @apply bg-slate-900/40 backdrop-blur-md border border-white/10;
+}
+
+.glass-card {
+  @apply bg-slate-800/40 backdrop-blur-lg border border-white/5 rounded-2xl shadow-xl transition-all duration-300;
+}
+
+.glass-card:hover {
+  @apply border-fuchsia-500/30 shadow-fuchsia-500/10;
+}
